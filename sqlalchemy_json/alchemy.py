@@ -24,7 +24,7 @@ class NestedMutable(mutable.MutableDict, track.TrackedDict):
       return value
     if isinstance(value, dict):
       return cls(value)
-    return super(cls).coerce(key, value)
+    return super().coerce(key, value)
 
 
 class _JsonTypeDecorator(sqlalchemy.TypeDecorator):
